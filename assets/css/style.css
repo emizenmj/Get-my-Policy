@@ -1,0 +1,678 @@
+/*-------------------------------------
+# Header CSS
+-------------------------------------*/
+
+header{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px 0;
+    z-index: 9;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+header.navbar-sticky{
+    -webkit-transition: none;
+    transition: none;
+}
+
+header.navbar-sticky-moved-up{
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    margin-top: -130px;
+}
+
+header.navbar-sticky-transitioned{
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+header.navbar-sticky-on{
+    margin-top: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+    box-shadow: 0px 1px 7px rgba(0,0,0,0.1);
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .brand-logo{
+    display: inline-block;
+}
+
+header .login-btn{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 15px;
+    border: 1px solid var(--navy-blue);
+    border-radius: 34px;
+    background-color: rgba(18, 76, 138, 0.34);
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-right: 35px;
+}
+
+header .login-btn img{
+    margin-right: 18px;
+}
+
+header span, header img{
+    vertical-align: middle;
+}
+
+header .nav-toggle-btn{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .call-agent-btn{
+    margin-right: 20px;
+}
+
+header:not(.navbar-sticky-moved-up) .nav-toggle-btn{
+    filter: brightness(0) invert(1);
+}
+
+@media only screen and (max-width: 1199px){
+    header .call-agent-btn{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .brand-logo{
+        max-width: 250px;
+    }
+
+    header .login-btn img{
+        width: 36px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .brand-logo{
+        max-width: 180px;
+    }    
+}
+
+@media only screen and (max-width: 479px){
+    .brand-logo{
+        max-width: 175px;
+    }
+    header .login-btn{
+        font-size: 0;
+        padding: 0;
+        margin-right: 15px;
+        border: 0;
+    }
+    header .login-btn img{
+        width: 36px;
+        margin-right: 0;
+    }
+    .login-btn span{
+        display: none;
+    }
+    header .nav-toggle-btn{
+        max-width: 24px;
+    }
+}
+
+
+/*-----------------------------------
+# Hero Banner CSS
+----------------------------------*/
+
+.hero-banner{
+    width: 100%;
+    height: 846px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-banner .container{
+    position: relative;
+    height: 100%;
+}
+
+.hero-banner-text{
+    padding-top: 260px;
+}
+
+.hero-banner-text h1{
+    font-size: 44px;
+    line-height: 55px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero-banner-text p{
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 300;
+    color: #fff;
+}
+@media only screen and (max-width: 1600px){
+    .hero-banner-text{
+        padding-left: 50px;
+    }
+}
+@media only screen and (max-width: 1365px){
+    .hero-banner{
+        height: 700px;
+    }
+    .hero-banner-text{
+        padding-top: 215px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .hero-banner-text h1{
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .hero-banner-text h1{   
+        font-size: 36px;
+        line-height: 48px;
+    }
+    .hero-banner-text p{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 479px){
+    .hero-banner-text{
+        padding-left: 0;
+    }
+    .hero-banner-text h1{
+        font-size: 28px;
+        line-height: 40px;
+    }
+    .hero-banner-text p{
+        font-size: 18px;
+    }
+}
+
+
+
+/*-----------------------------------------
+# How to Works CSS
+------------------------------------------*/
+
+.section-title{
+    padding-bottom: 35px;
+}
+.section-title h4{
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.works-section{
+    padding: 100px 0;
+}
+
+.how-to-works .works-section:nth-child(odd) .sec-row{
+    flex-direction: row-reverse;    
+}
+
+.works-section .sec-row{
+    display: flex;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.works-section .sec-row .sec-content {
+    padding: 0 20px;
+}
+
+.works-section .sec-row .sec-media,
+.works-section .sec-row .sec-content
+{
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+
+.how-to-works .works-section:nth-child(odd) .sec-media{
+    padding-left: 160px;
+    padding-right: 0;
+}
+
+.how-to-works .works-section:nth-child(even) .sec-media{
+    padding-left: 0;
+    padding-right: 160px;
+    direction: rtl;
+}
+
+.works-section .sec-media img{
+    max-width: none;
+}
+
+.works-section p, 
+.how-to-find p{
+    font-size: 18px;
+    color: #000000;
+    line-height: 35px;
+    margin-bottom: 35px;
+}
+
+.theme-listing{
+    margin-bottom: 30px;
+}
+
+.theme-listing h5{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 35px;
+    color: var(--black);
+}
+
+.theme-listing ul li{
+    font-size: 18px;
+    line-height: 35px;
+    color: var(--black);
+}
+
+.theme-listing ul li::before{
+    content: url("../images/icons/ic-double-arrow.png");
+    margin-right: 20px;
+}
+
+.call-agent-btn{
+    display: inline-block;
+    background-color: var(--navy-blue);
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.call-agent-btn:hover{
+    color: #fff;
+    background-color: var(--green);
+}
+
+.call-agent-btn .icon{
+    display: inline-block;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    background-color: #fff;
+    line-height: 44px;
+    text-align: center;
+}
+
+.call-agent-btn .icon img{
+    vertical-align: middle;
+}
+.call-agent-btn span{
+    display: inline-block;
+    padding: 0 15px;
+    text-align: center;
+    line-height: 24px;
+    vertical-align: middle;
+}
+.call-agent-btn b{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.how-to-find{
+    padding: 100px 0;
+}
+
+@media only screen and (max-width: 1399px){
+    .works-section,
+    .how-to-find{
+        padding: 60px 0;
+    }
+
+    .how-to-works .works-section:nth-child(odd) .sec-media{
+        padding-left: 100px;
+    }
+
+    .how-to-works .works-section:nth-child(even) .sec-media{
+        padding-right: 100px;
+    }
+}
+
+@media only screen and (max-width: 1199px){
+    .call-agent-btn b{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .works-section .sec-row .sec-media,
+    .works-section .sec-row .sec-content{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .how-to-works .works-section:nth-child(odd) .sec-media{
+        padding-left: 0;
+        text-align: right;
+    }
+
+    .how-to-works .works-section:nth-child(even) .sec-media{
+        padding-right: 0;
+        text-align: left;
+    }
+    .how-to-works .works-section .sec-media{
+        padding-bottom: 30px;
+    }
+    .how-to-works .works-section .sec-media img{
+        width: 75%;
+    }
+
+    .section-title h4{
+        font-size: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 575px){
+    .section-title{
+        padding-bottom: 20px;
+    }
+    .section-title h4{
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .works-section p, .how-to-find p{
+        font-size: 16px;    
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .theme-listing ul li{
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .theme-listing ul li::before{
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width: 479px){
+    .call-agent-btn{
+        width: 100%;
+        padding: 10px 0;
+        font-size: 10px;
+    }
+    .call-agent-btn b{
+        font-size: 11px;
+    }
+    .call-agent-btn .icon{
+        transform: scale(0.8);
+    }
+}
+
+
+/*---------------------------------------
+# Footer CSS
+---------------------------------------*/
+
+footer{
+    background-color: var(--navy-blue);
+}
+
+.footer-top{
+    padding-top: 95px;
+    padding-bottom: 45px;
+}
+
+.foot-row{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.foot-row > .foot-col {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 15px;
+}
+
+.foot-col h4{
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.foot-links li{
+    padding-bottom: 13px;
+}
+.foot-links li:last-child{
+    padding-bottom: 0;
+}
+
+.foot-links a{
+    display: inline-block;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+}
+
+.foot-links.site-navigation a{
+    font-weight: 700;
+}
+
+.brand-address{
+    display: inline-block;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;   
+}
+.brand-address span{
+    display: block;
+    padding-bottom: 13px;
+}
+
+.footer-bottom{
+    padding: 27px 15px;
+    text-align: center;
+    border-top: 1px solid #EDEDED;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 1199px){
+    .foot-col h4{
+        font-size: 22px;
+    }
+    .foot-links a,
+    .brand-address{
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .footer-top{
+        padding: 45px 0;
+    }
+    .footer-bottom{
+        font-size: 22px;
+        padding: 20px 15px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .foot-row{
+        margin-bottom: -30px;
+    }
+
+    .foot-row > .foot-col{
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .foot-col h4{
+        font-size: 20px;
+    }
+    .foot-links a, .brand-address{
+        font-size: 16px;
+    }
+    .footer-bottom{
+        font-size: 18px;
+    }
+}
+
+
+
+/*----------------------------------------
+# Serice Offered Section CSS
+----------------------------------------*/
+
+.service-offered-sec .container{
+    position: relative;
+}
+
+.service-offered{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 15px;
+}
+.service-box{
+    display: block;
+    text-align: center;
+    transition: all 0.4s ease;
+    align-self: flex-start;
+}
+
+.service-box:hover .service-media{
+    background-color: var(--green);
+/*    animation: spin 500ms linear 1;*/
+}
+
+.service-box:hover .service-media img{
+     filter: brightness(0) invert(1);
+}
+
+.service-box .service-media{
+    width: 168px;
+    height: 168px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px rgba(119, 119, 119, 0.7);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-box .service-title{
+    display: block;
+    max-width: 115px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    color: var(--black);
+}
+
+.service-box:nth-child(2){
+    margin-top: -20px;
+}
+.service-box:nth-child(3){
+    margin-top: -20px;
+}
+.service-box:nth-child(4){
+    margin-top: -100px;
+}
+.service-box:nth-child(5){
+    margin-top: -186px;
+}
+.service-box:nth-child(6){
+    margin-top: -217px;
+}
+.service-box:nth-child(7){
+    margin-top: -168px;
+}
+
+@media only screen and (max-width: 1599px){
+    .service-box .service-media{
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media only screen and (max-width: 1199px){
+    .service-box .service-media{
+        width: 100px;
+        height: 100px;
+    } 
+    .service-box .service-media img{
+        max-width: 50px;
+    }
+}
+
+@media only screen and (max-width: 1399px){
+    .service-box .service-title{
+        font-size: 16px;
+    }
+    .service-box:nth-child(2){
+        margin-top: 0;
+    }
+    .service-box:nth-child(4){
+        margin-top: -50px;
+    }
+    .service-box:nth-child(5){
+        margin-top: -100px;
+    }
+    .service-box:nth-child(6){
+        margin-top: -167px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .service-offered{
+        position: static;
+    }
+    .service-box{
+        margin-top: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .service-offered{
+        flex-wrap: wrap;
+        margin-top: -20px;
+    }
+
+    .service-box{
+        padding-bottom: 20px;
+    }
+}
