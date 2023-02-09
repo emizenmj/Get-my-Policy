@@ -223,6 +223,10 @@ header:not(.navbar-sticky-moved-up) .nav-toggle-btn{
     padding: 100px 0;
 }
 
+.how-to-works{
+    overflow-x: hidden;
+}
+
 .how-to-works .works-section:nth-child(odd) .sec-row{
     flex-direction: row-reverse;    
 }
@@ -234,10 +238,6 @@ header:not(.navbar-sticky-moved-up) .nav-toggle-btn{
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
-}
-
-body{
-    overflow-x: hidden;
 }
 
 .works-section .sec-row .sec-content {
