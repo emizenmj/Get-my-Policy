@@ -367,6 +367,154 @@ header:not(.navbar-sticky-moved-up) .nav-toggle-btn{
 }
 
 
+/*----------------------------------------
+# Serice Offered Section CSS
+----------------------------------------*/
+
+.service-offered-sec .container{
+    position: relative;
+}
+
+.service-offered{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 15px;
+}
+.service-box{
+    display: block;
+    text-align: center;
+    transition: all 0.4s ease;
+    align-self: flex-start;
+}
+
+.service-box:hover .service-media{
+    background-color: var(--green);
+/*    animation: spin 500ms linear 1;*/
+}
+
+.service-box:hover .service-media img{
+     filter: brightness(0) invert(1);
+}
+
+.service-box .service-media{
+    width: 168px;
+    height: 168px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 30px rgba(119, 119, 119, 0.7);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-box .service-title{
+    display: block;
+    max-width: 115px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    color: var(--black);
+}
+
+.service-box:nth-child(2){
+    margin-top: -20px;
+}
+.service-box:nth-child(3){
+    margin-top: -20px;
+}
+.service-box:nth-child(4){
+    margin-top: -100px;
+}
+.service-box:nth-child(5){
+    margin-top: -186px;
+}
+.service-box:nth-child(6){
+    margin-top: -217px;
+}
+.service-box:nth-child(7){
+    margin-top: -168px;
+}
+
+@media only screen and (max-width: 1599px){
+    .service-box .service-media{
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media only screen and (max-width: 1199px){
+    .service-box .service-media{
+        width: 100px;
+        height: 100px;
+    } 
+    .service-box .service-media img{
+        max-width: 50px;
+    }
+}
+
+@media only screen and (max-width: 1399px){
+    .service-box .service-title{
+        font-size: 16px;
+    }
+    .service-box:nth-child(2){
+        margin-top: 0;
+    }
+    .service-box:nth-child(4){
+        margin-top: -50px;
+    }
+    .service-box:nth-child(5){
+        margin-top: -100px;
+    }
+    .service-box:nth-child(6){
+        margin-top: -167px;
+    }
+}
+@media only screen and (max-width: 1199px){
+    .service-box:nth-child(3){
+        margin-top: -10px;
+    }
+    .service-box:nth-child(4){
+        margin-top: -30px;
+    }
+    .service-box:nth-child(5){
+        margin-top: -50px;
+    }
+    .service-box:nth-child(6){
+        margin-top: -100px;
+    }
+    .service-box:nth-child(7){
+        margin-top: -140px;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .service-offered{
+        position: static;
+    }
+    .service-box{
+        margin-top: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .service-offered{
+        flex-wrap: wrap;
+        margin-top: -20px;
+    }
+
+    .service-box{
+        padding-bottom: 20px;
+    }
+}
+
 
 /*-----------------------------------------
 # How to Works CSS
@@ -506,7 +654,7 @@ header:not(.navbar-sticky-moved-up) .nav-toggle-btn{
 @media only screen and (max-width: 1399px){
     .works-section,
     .how-to-find{
-        padding: 60px 0;
+        padding: 30px 0;
     }
 
     .how-to-works .works-section:nth-child(odd) .sec-media{
@@ -555,11 +703,6 @@ header:not(.navbar-sticky-moved-up) .nav-toggle-btn{
 }
 
 @media only screen and (max-width: 575px){
-    .works-section,
-    .how-to-find{
-        padding: 30px 0;
-    }
-
     .section-title{
         padding-bottom: 20px;
     }
@@ -710,155 +853,5 @@ footer{
     }
     .footer-bottom{
         font-size: 18px;
-    }
-}
-
-
-
-/*----------------------------------------
-# Serice Offered Section CSS
-----------------------------------------*/
-
-.service-offered-sec .container{
-    position: relative;
-}
-
-.service-offered{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0 15px;
-}
-.service-box{
-    display: block;
-    text-align: center;
-    transition: all 0.4s ease;
-    align-self: flex-start;
-}
-
-.service-box:hover .service-media{
-    background-color: var(--green);
-/*    animation: spin 500ms linear 1;*/
-}
-
-.service-box:hover .service-media img{
-     filter: brightness(0) invert(1);
-}
-
-.service-box .service-media{
-    width: 168px;
-    height: 168px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 0 30px rgba(119, 119, 119, 0.7);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.service-box .service-title{
-    display: block;
-    max-width: 115px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 300;
-    color: var(--black);
-}
-
-.service-box:nth-child(2){
-    margin-top: -20px;
-}
-.service-box:nth-child(3){
-    margin-top: -20px;
-}
-.service-box:nth-child(4){
-    margin-top: -100px;
-}
-.service-box:nth-child(5){
-    margin-top: -186px;
-}
-.service-box:nth-child(6){
-    margin-top: -217px;
-}
-.service-box:nth-child(7){
-    margin-top: -168px;
-}
-
-@media only screen and (max-width: 1599px){
-    .service-box .service-media{
-        width: 140px;
-        height: 140px;
-    }
-}
-
-@media only screen and (max-width: 1199px){
-    .service-box .service-media{
-        width: 100px;
-        height: 100px;
-    } 
-    .service-box .service-media img{
-        max-width: 50px;
-    }
-}
-
-@media only screen and (max-width: 1399px){
-    .service-box .service-title{
-        font-size: 16px;
-    }
-    .service-box:nth-child(2){
-        margin-top: 0;
-    }
-    .service-box:nth-child(4){
-        margin-top: -50px;
-    }
-    .service-box:nth-child(5){
-        margin-top: -100px;
-    }
-    .service-box:nth-child(6){
-        margin-top: -167px;
-    }
-}
-@media only screen and (max-width: 1199px){
-    .service-box:nth-child(3){
-        margin-top: -10px;
-    }
-    .service-box:nth-child(4){
-        margin-top: -30px;
-    }
-    .service-box:nth-child(5){
-        margin-top: -50px;
-    }
-    .service-box:nth-child(6){
-        margin-top: -100px;
-    }
-    .service-box:nth-child(7){
-        margin-top: -140px;
-    }
-}
-
-@media only screen and (max-width: 991px){
-    .service-offered{
-        position: static;
-    }
-    .service-box{
-        margin-top: 0 !important;
-    }
-}
-
-@media only screen and (max-width: 767px){
-    .service-offered{
-        flex-wrap: wrap;
-        margin-top: -20px;
-    }
-
-    .service-box{
-        padding-bottom: 20px;
     }
 }
